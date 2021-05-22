@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 const handleWeather = (req, res) => {
-    console.log("req.body",req.body)
+    console.log("nice")
 }
 
 module.exports = {
