@@ -15,8 +15,11 @@ app.get('/', (req, res)=>{
     res.status(200).send('success')
 })
 
-app.post('/dashboard', (req,res)=>{
-    weather.handleWeather(req,res)
+app.post('/dashboard',  (req,res)=>{
+    weatherData = weather.handleWeather(req,res);
+    //If successful
+    res.status(200).json(weatherData)
+    //If failure...
 })
 
 app.listen(3002, ()=>{
