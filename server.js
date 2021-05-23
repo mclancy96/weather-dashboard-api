@@ -16,7 +16,6 @@ app.get('/', (req, res)=>{
 })
 
 app.post('/dashboard', (req,res)=>{
-    console.log(req.body)
     weather.handleWeather(req,res)
 })
 
