@@ -2,8 +2,6 @@ const express = require("express");
 const app = express();
 const cors = require('cors');
 
-// Set port, api key, and url
-
 const weather = require('./controllers/weather');
 
 app.use(cors())
@@ -15,13 +13,8 @@ app.get('/', (req, res)=>{
     res.status(200).send('success')
 })
 
-app.post('/dashboard',  (req,res)=>{
-    weatherData = weather.handleWeather(req,res);
-    //If successful
-    res.status(200).json(weatherData)
-    //If failure...
-})
+app.post('/dashboard', (req,res)=>{weather.handleWeather(req,res);})
 
-app.listen(3002, ()=>{
+app.listen(process.env.PORT, ()=>{
     console.log("App is running")
 })
