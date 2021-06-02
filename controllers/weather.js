@@ -113,7 +113,7 @@ setVariables = (data) => {
                         icon: Object.values(hr)[12][0].icon
                     }
                 ],
-                pop: Math.round(Object.values(hr)[13])
+                pop: Object.values(hr)[13].toFixed(2)
             });   
         });
     }
@@ -162,7 +162,7 @@ setVariables = (data) => {
                 icon: Object.values(day)[14][0].icon
             },
             clouds: Object.values(day)[15],
-            pop: Math.round(Object.values(day)[16]),
+            pop: Object.values(day)[16].toFixed(2),
             rain: Object.values(day)[17],
             uvi: Object.values(day)[18]
         });
